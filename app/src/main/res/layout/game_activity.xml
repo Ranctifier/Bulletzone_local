@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tankId"
+        android:id="@+id/textViewTankId"
+        android:layout_gravity="center_horizontal|top"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Join"
+            android:id="@+id/btnJoin"
+            android:layout_weight="1"
+            android:onClick="joinClicked"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnTurnCCW"
+            android:layout_weight="1"
+            android:onClick="turnCCWClicked"
+            android:background="@drawable/counterclockwise"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnForward"
+            android:layout_weight="1"
+            android:onClick="forwardClicked"
+            android:background="@drawable/forward"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnReverse"
+            android:layout_weight="1"
+            android:onClick="reverseClicked"
+            android:background="@drawable/reverse"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnTurnCW"
+            android:layout_weight="1"
+            android:onClick="turnCWClicked"
+            android:background="@drawable/clockwise"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnFire"
+            android:layout_weight="1"
+            android:onClick="fireClicked"
+            android:background="@drawable/fire"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deathBG"
+            android:background="@drawable/death"
+            android:layout_marginBottom="30dp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back To Main Menu"
+            android:id="@+id/btnMain"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:onClick="endGame"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/gridFrame"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp">
+        <GridView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/gameGrid"
+            android:padding="0dp"
+            android:numColumns="16"
+            android:columnWidth="25dp"
+            android:horizontalSpacing="0dp"
+            android:verticalSpacing="0dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            android:visibility="visible"/>
+    </FrameLayout>
+</FrameLayout>
